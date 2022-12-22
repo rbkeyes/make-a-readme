@@ -7,52 +7,51 @@ const questions = [
     {
         type: 'input',
         message: "What is your project title?",
-        name: 'Title',
-    }, {
-        type: 'input',
-        message: "Enter a description of your project.",
-        name: 'Description',
-    }, {
-        type: 'input',
-        message: "What are the steps required to install?",
-        name: 'Installation',
-    }, {
-        type: 'input',
-        message: "What are the instructions for use?",
-        name: 'Usage',
-    }, {
-        type: 'checkbox',
-        message: "Please choose a license for your project.",
-        choices: ["MIT", "Apache License 2.0", "GNU GPLv3", "ISC"],
-        name: 'License',
-    }, {
-        type: 'input',
-        message: "Include contributions guidelines here.",
-        name: 'Contributing',
-    }, {
-        type: 'input',
-        message: "Write tests for your application. Include examples for how to run tests.",
-        name: 'Tests'
-    }, {
-            type: 'input',
-            message: "What is your github username?",
-            name: 'GitHub'
-        }, {
-            type: 'input',
-            message: "What is your email address?",
-            name: 'Email'
-        }
+        name: 'title',
+    }, 
+    // {
+    //     type: 'input',
+    //     message: "Enter a description of your project.",
+    //     name: 'Description',
+    // }, {
+    //     type: 'input',
+    //     message: "What are the steps required to install?",
+    //     name: 'Installation',
+    // }, {
+    //     type: 'input',
+    //     message: "What are the instructions for use?",
+    //     name: 'usage',
+    // }, {
+    //     type: 'list',
+    //     message: "Please choose a license for your project.",
+    //     choices: ["MIT", "Apache License 2.0", "GNU GPLv3", "ISC"],
+    //     name: 'license',
+    // }, {
+    //     type: 'input',
+    //     message: "Include contributions guidelines here.",
+    //     name: 'contributing',
+    // }, {
+    //     type: 'input',
+    //     message: "Write tests for your application. Include examples for how to run tests.",
+    //     name: 'tests'
+    // }, {
+    //         type: 'input',
+    //         message: "What is your github username?",
+    //         name: 'gitHub'
+    //     }, {
+    //         type: 'input',
+    //         message: "What is your email address?",
+    //         name: 'email'
+    //     }
 ];
 
 inquirer.prompt(questions)
-  .then ((data) => {
-    const filename = `${data.name.toLowerCase().split(' ').join}`
-  })
-  .then((response) => {
-  console.log(response);
-    response.confirm === response.password
-      ? console.log('Success!')
-      : console.log('You forgot your password already?!')
+.then((data) => {
+    const filename = `${data.title.toLowerCase().split(' ').join('')}.md`;
+
+    fs.writeFile(README.md, JSON.stringify(data, null, '\t'), (err) =>
+      err ? console.log(err) : console.log('Success!')
+    );
   });
 
 // // TODO: Create a function to write README file
