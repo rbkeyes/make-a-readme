@@ -7,56 +7,90 @@ const questions = [
     {
         type: 'input',
         message: "What is your project title?",
-        name: 'Title',
-    }, {
+        name: 'title',
+    },
+    {
         type: 'input',
         message: "Enter a description of your project.",
-        name: 'Description',
+        name: 'description',
     }, {
         type: 'input',
         message: "What are the steps required to install?",
-        name: 'Installation',
+        name: 'installation',
     }, {
         type: 'input',
         message: "What are the instructions for use?",
-        name: 'Usage',
+        name: 'usage',
     }, {
-        type: 'checkbox',
+        type: 'list',
         message: "Please choose a license for your project.",
         choices: ["MIT", "Apache License 2.0", "GNU GPLv3", "ISC"],
-        name: 'License',
+        name: 'license',
     }, {
         type: 'input',
         message: "Include contributions guidelines here.",
-        name: 'Contributing',
+        name: 'contributing',
     }, {
         type: 'input',
         message: "Write tests for your application. Include examples for how to run tests.",
-        name: 'Tests'
+        name: 'tests'
     }, {
-            type: 'input',
-            message: "What is your github username?",
-            name: 'GitHub'
-        }, {
-            type: 'input',
-            message: "What is your email address?",
-            name: 'Email'
-        }
+        type: 'input',
+        message: "What is your github username?",
+        name: 'github'
+    }, {
+        type: 'input',
+        message: "What is your email address?",
+        name: 'email'
+    }
 ];
 
-inquirer.prompt(questions)
-  .then ((data) => {
-    const filename = `${data.name.toLowerCase().split(' ').join}`
-  })
-  .then((response) => {
-  console.log(response);
-    response.confirm === response.password
-      ? console.log('Success!')
-      : console.log('You forgot your password already?!')
-  });
+// TODO: Create a function to write README file
+const generateReadMe = ({ title, description, installation, usage, license, contributing, tests, github, email  }) =>
+`#${title}
 
-// // TODO: Create a function to write README file
-// function writeToFile(fileName, data) { }
+##Table of Contents
+-[Description](#description)
+-[Installation](#installation)
+-[Usage](#usage)
+-[License](#license)
+-[Contributing](#contributing)
+-[Tests](#tests)
+-[Questions](#questions)
+
+## Description
+${description}
+
+##Installation
+${installation}
+
+##Usage
+${usage}
+
+##License
+${license}
+
+##Contributing
+${contributing}
+
+##Tests
+${tests}
+
+##Questions
+Still have questions? Email the developer at ${email}.
+[GitHub Profile](https://github.com/${github})
+`
+
+inquirer
+.prompt(questions)
+
+.then((data) => {
+    const readmeContent = generateReadMe(data);
+
+    fs.writeFile('README.md', readmeContent, (err) =>
+      err ? console.log(err) : console.log('Successfully created README.md file!')
+    );
+  });
 
 // // TODO: Create a function to initialize app
 // function init() { }
