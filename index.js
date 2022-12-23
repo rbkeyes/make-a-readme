@@ -46,7 +46,7 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-const generateReadMe = ({ title, description, installation, usage, license, contributing, tests, github, email  }) =>
+const generateReadMe = ({ title, description, installation, usage, license, contributing, tests, github, email }) =>
 `#${title}
 
 ##Table of Contents
