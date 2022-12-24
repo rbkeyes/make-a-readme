@@ -47,37 +47,38 @@ const questions = [
 
 // TODO: Create a function to write README file
 const generateReadMe = ({ title, description, installation, usage, license, contributing, tests, github, email }) =>
-`#${title}
+`# ${title}
 
-##Table of Contents
--[Description](#description)
--[Installation](#installation)
--[Usage](#usage)
--[License](#license)
--[Contributing](#contributing)
--[Tests](#tests)
--[Questions](#questions)
+## Table of Contents
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
 
 ## Description
 ${description}
 
-##Installation
+## Installation
 ${installation}
 
-##Usage
+## Usage
 ${usage}
 
-##License
+## License
 ${license}
 
-##Contributing
+## Contributing
 ${contributing}
 
-##Tests
+## Tests
 ${tests}
 
-##Questions
+## Questions
 Still have questions? Email the developer at ${email}.
+
 [GitHub Profile](https://github.com/${github})
 `
 
