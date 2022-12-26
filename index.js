@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -24,7 +25,7 @@ const questions = [
     }, {
         type: 'list',
         message: "Please choose a license for your project.",
-        choices: ["MIT", "Apache License 2.0", "GNU GPLv3", "ISC"],
+        choices: ["MIT", "Apache-2.0", "GPL-3", "ISC", 'None'],
         name: 'license',
     }, {
         type: 'input',
@@ -46,56 +47,24 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-const generateReadMe = ({ title, description, installation, usage, license, contributing, tests, github, email }) =>
-`# ${title}
+function writeToFile(data) {
 
-## Table of Contents
-- [Description](#description)
-- [Installation](#installation)
-- [Usage](#usage)
-- [License](#license)
-- [Contributing](#contributing)
-- [Tests](#tests)
-- [Questions](#questions)
+    fs.writeFile('README.md', data, function (err) {
+        err ? console.log(err) : console.log("file created!")
+    });
+}
 
-## Description
-${description}
+// TODO: Create a function to initialize app
+function init() {
 
-## Installation
-${installation}
+    inquirer
+        .prompt(questions)
+        .then((answers) => {
+            const fileContent = generateMarkdown(answers);
+            writeToFile(fileContent);
+        })
+}
 
-## Usage
-${usage}
-
-## License
-${license}
-
-## Contributing
-${contributing}
-
-## Tests
-${tests}
-
-## Questions
-Still have questions? Email the developer at ${email}.
-
-[GitHub Profile](https://github.com/${github})
-`
-
-inquirer
-.prompt(questions)
-
-.then((data) => {
-    const readmeContent = generateReadMe(data);
-
-    fs.writeFile('README.md', readmeContent, (err) =>
-      err ? console.log(err) : console.log('Successfully created README.md file!')
-    );
-  });
-
-// // TODO: Create a function to initialize app
-// function init() { }
-
-// // Function call to initialize app
-// init();
+// Function call to initialize app
+init();
 
