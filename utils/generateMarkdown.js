@@ -14,7 +14,7 @@ function renderLicenseSection(license) {}
 // function generateMarkdown(data) {
   // return `# ${data.title}
   // const generateMarkdown = ({ title, description, installation, usage, license, contributing, tests, github, email }) =>
-  const generateMarkdown = ({ data }) =>
+  function generateMarkdown(data) {
   `# ${data.title}
   
   ## Table of Contents
@@ -49,6 +49,6 @@ function renderLicenseSection(license) {}
   
   [GitHub Profile](https://github.com/${data.github})
   `;
-// `}
+};
 
 module.exports = generateMarkdown;
