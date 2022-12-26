@@ -25,7 +25,7 @@ const questions = [
     }, {
         type: 'list',
         message: "Please choose a license for your project.",
-        choices: ["MIT", "Apache License 2.0", "GNU GPLv3", "ISC"],
+        choices: ["MIT", "Apache-2.0", "GPL-3", "ISC", 'None'],
         name: 'license',
     }, {
         type: 'input',
@@ -47,19 +47,20 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-            fs.writeFile(fileName, data, (err) =>
-                err ? console.log(err) : console.log(`Successfully created ${fileName} file!`)
-            )
-        };
+function writeToFile(data) {
+
+    fs.writeFile('README.md', data, function (err) {
+        err ? console.log(err) : console.log("file created!")
+    });
+}
 
 // TODO: Create a function to initialize app
 function init() {
+
     inquirer
         .prompt(questions)
-
-        .then (answers => writeToFile('README.md', generateMarkdown(answers)));
-    };
+        .then(answers => writeToFile(generateMarkdown(answers)))
+}
 
 // Function call to initialize app
 init();
