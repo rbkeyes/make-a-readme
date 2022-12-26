@@ -1,6 +1,4 @@
-# test
-
-  ![license badge](https://img.shields.io/badge/license-MIT-blueviolet)
+# title
   
   ## Table of Contents
   - [Description](#description)
@@ -12,25 +10,24 @@
   - [Questions](#questions)
   
   ## Description
-  test
+  description
   
   ## Installation
-  test
+  steps
   
   ## Usage
-  test
+  instructions
   
   ## License
-  This repository is licensed under a(n) MIT license./n 
-    Click [here](https://choosealicense.com/licenses/undefined/) for more information.
+  MIT
   
   ## Contributing
-  test
+  guidelines
   
   ## Tests
-  test
+  tests
   
   ## Questions
-  Still have questions? Email me at test./n
-  Check me out on [GitHub](https://github.com/test)
+  Still have questions? Email me at email./n
+  Check me out on [GitHub](https://github.com/name)
   

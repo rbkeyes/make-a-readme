@@ -1,45 +1,44 @@
-let badge = '';
-let link = '';
-let licenseSection = '';
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {
-  if (license !== "None") {
-    badge = `https://img.shields.io/badge/license-${license}-blueviolet`
-  } else {
-    badge = ''
-  }
-  return badge;
-}
+// let badge = '';
+// let link = '';
+// let licenseSection = '';
+// // TODO: Create a function that returns a license badge based on which license is passed in
+// // If there is no license, return an empty string
+// function renderLicenseBadge(license) {
+//   if (license !== "None") {
+//     badge = `https://img.shields.io/badge/license-${license}-blueviolet`
+//   } else {
+//     badge = ''
+//   }
+//   return badge;
+// }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {
-  if (license !== "None") {
-    link = `https://choosealicense.com/licenses/${license}/`
-  } else {
-    link = '';
-  }
-  return link;
-};
+// // TODO: Create a function that returns the license link
+// // If there is no license, return an empty string
+// function renderLicenseLink(license) {
+//   if (license !== "None") {
+//     link = `https://choosealicense.com/licenses/${license}/`
+//   } else {
+//     link = '';
+//   }
+//   return link;
+// };
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) { 
-  if (license !== "None") {
-    licenseSection = `This repository is licensed under a(n) ${license} license./n 
-    Click [here](${renderLicenseLink()}) for more information.`
-  } else {
-    licenseSection = '';
-  }
-  return licenseSection;
-}
+// // TODO: Create a function that returns the license section of README
+// // If there is no license, return an empty string
+// function renderLicenseSection(license) { 
+//   if (license !== "None") {
+//     licenseSection = `This repository is licensed under a(n) ${license} license./n 
+//     Click [here](${renderLicenseLink()}) for more information.`
+//   } else {
+//     licenseSection = '';
+//   }
+//   return licenseSection;
+// }
+// ![license badge](${renderLicenseBadge(license)})
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown({answers}) {
-  return `# ${answers.title}
-
-  ![license badge](${renderLicenseBadge(license)})
+function generateMarkdown({title, description, installation, usage, license, contributing, tests, github, email}) {
+  return `# ${title}
   
   ## Table of Contents
   - [Description](#description)
@@ -60,7 +59,7 @@ function generateMarkdown({answers}) {
   ${usage}
   
   ## License
-  ${renderLicenseSection(license)}
+  ${license}
   
   ## Contributing
   ${contributing}
