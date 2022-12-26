@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateMarkdown() = require('generateMarkdown')
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -46,56 +47,20 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-const generateReadMe = ({ title, description, installation, usage, license, contributing, tests, github, email }) =>
-`# ${title}
+function writeToFile(fileName, data) {
+            fs.writeFile(fileName, data, (err) =>
+                err ? console.log(err) : console.log(`Successfully created ${fileName} file!`)
+            )
+        };
 
-## Table of Contents
-- [Description](#description)
-- [Installation](#installation)
-- [Usage](#usage)
-- [License](#license)
-- [Contributing](#contributing)
-- [Tests](#tests)
-- [Questions](#questions)
+// TODO: Create a function to initialize app
+function init() {
+    inquirer
+        .prompt(questions)
 
-## Description
-${description}
+        .then (answers => writeToFile('README.md', generateMarkdown(answers)));
+    };
 
-## Installation
-${installation}
-
-## Usage
-${usage}
-
-## License
-${license}
-
-## Contributing
-${contributing}
-
-## Tests
-${tests}
-
-## Questions
-Still have questions? Email the developer at ${email}.
-
-[GitHub Profile](https://github.com/${github})
-`
-
-inquirer
-.prompt(questions)
-
-.then((data) => {
-    const readmeContent = generateReadMe(data);
-
-    fs.writeFile('README.md', readmeContent, (err) =>
-      err ? console.log(err) : console.log('Successfully created README.md file!')
-    );
-  });
-
-// // TODO: Create a function to initialize app
-// function init() { }
-
-// // Function call to initialize app
-// init();
+// Function call to initialize app
+init();
 
