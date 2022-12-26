@@ -1,6 +1,6 @@
 # [object Object]
 
-  
+  ![license badge](https://img.shields.io/badge/license-undefined-blueviolet)
   
   ## Table of Contents
   - [Description](#description)
@@ -21,7 +21,7 @@
   undefined
   
   ## License
-  
+  undefined
   
   ## Contributing
   undefined

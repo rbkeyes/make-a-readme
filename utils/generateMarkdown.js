@@ -1,7 +1,6 @@
 let badge = '';
 let link = '';
-const licenseSection = '';
-
+let licenseSection = '';
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
@@ -28,19 +27,18 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) { 
   if (license !== "None") {
-    const licenseSection = `This repository is licensed under a(n) ${license} license./n 
-    Click [here](${link}) for more information.`
+    licenseSection = `This repository is licensed under a(n) ${license} license./n 
+    Click [here](${renderLicenseLink()}) for more information.`
   } else {
-    licenseSection = ''
+    licenseSection = '';
   }
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(title, description, installation, usage, license, contributing, tests, github, email) {
-  // renderLicenseBadge(license);
-  // renderLicenseLink(license);
-  // renderLicenseSection(license);
-  `# ${title}
+  return `# ${title}
+
+  ![license badge](${renderLicenseBadge()})
   
   ## Table of Contents
   - [Description](#description)
@@ -61,7 +59,7 @@ function generateMarkdown(title, description, installation, usage, license, cont
   ${usage}
   
   ## License
-  ${license}
+  ${renderLicenseSection()}
   
   ## Contributing
   ${contributing}
