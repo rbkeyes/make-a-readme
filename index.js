@@ -59,7 +59,10 @@ function init() {
 
     inquirer
         .prompt(questions)
-        .then(answers => writeToFile(generateMarkdown(answers)))
+        .then((answers) => {
+            const fileContent = generateMarkdown(answers);
+            writeToFile(fileContent);
+        })
 }
 
 // Function call to initialize app
