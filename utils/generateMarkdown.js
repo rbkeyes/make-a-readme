@@ -16,7 +16,11 @@ function renderLicenseBadge(license) {
 // // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license !== "None") {
-    link = `https://choosealicense.com/licenses/${license}/`
+    if (license === "GPL") {
+      link = `https://choosealicense.com/licenses/${license.toLowerCase()}-3.0/`
+    } else {
+      link = `https://choosealicense.com/licenses/${license.toLowerCase()}/`
+    }
   } else {
     link = '';
   }
@@ -27,6 +31,7 @@ function renderLicenseLink(license) {
 // // If there is no license, return an empty string
 function renderLicenseSection(license) { 
   if (license !== "None") {
+    
     licenseSection = `This repository is licensed under a(n) ${license} license.
     Click [here](${renderLicenseLink(license)}) for more information.`
   } else {
