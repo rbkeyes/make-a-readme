@@ -1,8 +1,4 @@
-// let badge = '';
-// let link = '';
-// let licenseSection = '';
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// generate license badge
 function renderLicenseBadge(license) {
   if (license !== "None") {
     badge = `https://img.shields.io/badge/license-${license}-blue`
@@ -12,8 +8,7 @@ function renderLicenseBadge(license) {
   return badge;
 }
 
-// // TODO: Create a function that returns the license link
-// // If there is no license, return an empty string
+// generate license link
 function renderLicenseLink(license) {
   if (license !== "None") {
     if (license === "GPL") {
@@ -27,20 +22,18 @@ function renderLicenseLink(license) {
   return link;
 };
 
-// // TODO: Create a function that returns the license section of README
-// // If there is no license, return an empty string
+// generate license section text with license link included..
 function renderLicenseSection(license) { 
   if (license !== "None") {
     
-    licenseSection = `This repository is licensed under a(n) ${license} license.
-    Click [here](${renderLicenseLink(license)}) for more information.`
+    licenseSection = `This repository is licensed under the [${license} license](${renderLicenseLink(license)}).`
   } else {
     licenseSection = '';
   }
   return licenseSection;
 }
 
-// TODO: Create a function to generate markdown for README
+// generate markdown for README
 function generateMarkdown({title, description, installation, usage, license, contributing, tests, github, email}) {
   return `# ${title}
   
