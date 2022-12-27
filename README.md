@@ -1,4 +1,4 @@
-# title
+# Title
   
   ![License Badge](https://img.shields.io/badge/license-GPL-blue)
 
@@ -12,25 +12,25 @@
   - [Questions](#questions)
   
   ## Description
-  projec description
+  sample readme file
   
   ## Installation
-  installation steps
+  test
   
   ## Usage
-  instructions
+  test
   
   ## License
-  This repository is licensed under a(n) GPL-3 license. 
-  Click [here](https://choosealicense.com/licenses/gpl-3.0/) for more information.
+  This repository is licensed under a(n) GPL license.
+    Click [here](https://choosealicense.com/licenses/MIT/) for more information.
   
   ## Contributing
-  contribute
+  n/a
   
   ## Tests
-  examples
+  tbd
   
   ## Questions
-  Still have questions? Email me at address.
-  Check me out on [GitHub](https://github.com/name)
+  Still have questions? Email me at email.
+  Check me out on [GitHub](https://github.com/username)
   
