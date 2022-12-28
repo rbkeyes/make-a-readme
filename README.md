@@ -12,7 +12,7 @@
   - [Questions](#questions)
   
   ## Description
-  This program uses Node.js and the inquirer v. 8.2.4 npm to generate a quality README.md file using input gathered from a series of prompts. 
+  This program uses Node.js and the inquirer v. 8.2.4 npm to generate a quality README.md file using input gathered from a series of prompts. I created this program to provide a basice framework for developers to create a README.md file for their projects with all of the necessary topics they might want to include. 
   
   ## Installation
   First, make sure you have Node.js installed on your computer. If you do not, you can download the [latest version](https://nodejs.org/en/).
@@ -24,7 +24,9 @@
   ## Usage
   Once everything is installed, run "node index.js" in your terminal. You will be prompted with a series of questions that will gather the necessary data to generate your README.md file. Upon completion, the message "README.md file created!" will display in the terminal and a README.md file will be created and added to your local repository. If, for some reason, it was unsuccesful, an error message will display instead.
 
-  For more information, please see the [video demo](). Note: for demonstration purposes, the file created in the demo is titled sampleREADME.md. The final version generates the title README.md. 
+  If additional topics are desired they can either be added to the code in index.js (questions variable) and generateMarkdown.js (generateMarkdown function), or added directly to the markdown file once it has been generated.
+
+  For more information on how to use this program, please see the [video demo](). Note: for demonstration purposes, the file created in the demo is titled sampleREADME.md. The final version generates a file with the title README.md. 
   
   ## License
   This repository is licensed under the [MIT license](https://choosealicense.com/licenses/mit/).
