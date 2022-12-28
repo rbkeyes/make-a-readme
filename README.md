@@ -26,7 +26,7 @@
 
   If additional topics are desired they can either be added to the code in index.js (questions variable) and generateMarkdown.js (generateMarkdown function), or added directly to the markdown file once it has been generated.
 
-  For more information on how to use this program, please see the [video demo](). Note: for demonstration purposes, the file created in the demo is titled sampleREADME.md. The final version generates a file with the title README.md. 
+  For more information on how to use this program, please see the [video demo](https://drive.google.com/file/d/1k0ii7_eHf176WipAbPzOV4Z0wTyfg_kd/view). Note: for demonstration purposes, the file created in the demo is titled sampleREADME.md. The final version generates a file with the title README.md. 
   
   ## License
   This repository is licensed under the [MIT license](https://choosealicense.com/licenses/mit/).
