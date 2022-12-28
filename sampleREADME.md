@@ -1,4 +1,4 @@
-# Title
+# Project Title
   
   ![License Badge](https://img.shields.io/badge/license-MIT-blue)
 
@@ -12,22 +12,22 @@
   - [Questions](#questions)
   
   ## Description
-  description
+  Description of project here.
   
   ## Installation
-  steps to install
+  Installation instructions.
   
   ## Usage
-  instructions to use
+  Describe how to use.
   
   ## License
   This repository is licensed under the [MIT license](https://choosealicense.com/licenses/mit/).
   
   ## Contributing
-  contribution guidelines
+  Contribution guidelines.
   
   ## Tests
-  tests go here
+  Examples of any tests.
   
   ## Questions
   Still have questions? Email me at rbkeyes@gmail.com.
