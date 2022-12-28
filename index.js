@@ -50,7 +50,7 @@ const questions = [
 function writeToFile(data) {
 
     fs.writeFile('sampleREADME.md', data, function (err) {
-        err ? console.log(err) : console.log("file created!")
+        err ? console.log(err) : console.log("README.md file created!")
     });
 }
 
