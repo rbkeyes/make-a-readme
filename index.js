@@ -49,7 +49,7 @@ const questions = [
 // write readme file
 function writeToFile(data) {
 
-    fs.writeFile('sampleREADME.md', data, function (err) {
+    fs.writeFile('README.md', data, function (err) {
         err ? console.log(err) : console.log("README.md file created!")
     });
 }
