@@ -17,7 +17,7 @@
   ## Installation
   First, make sure you have Node.js installed on your computer. If you do not, you can download the [latest version](https://nodejs.org/en/).
 
-  Next, you will need to create a fork from the make-a-readme repository, then clone the repository to your local system. If you need help please follow the instructions outlined in [Github Docs](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
+  Next, you will need to create a fork from the [make-a-readme repository](https://github.com/rbkeyes/make-a-readme), then clone the repository to your local system. If you need help please follow the instructions outlined in [Github Docs](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
 
   Once you have cloned succesfully, install inquirer v.8.2.4 by running "npm install inquirer@8.2.4" in your terminal. For more information, check out the [inquirer.js docs](https://www.npmjs.com/package/inquirer/v/8.2.4).
   
@@ -26,7 +26,9 @@
 
   If additional topics are desired they can either be added to the code in index.js (questions variable) and generateMarkdown.js (generateMarkdown function), or added directly to the markdown file once it has been generated.
 
-  For more information on how to use this program, please see the [video demo](). Note: for demonstration purposes, the file created in the demo is titled sampleREADME.md. The final version generates a file with the title README.md. 
+  For more information on how to use this program, please see the [video demo](https://drive.google.com/file/d/1ylJ-9rcTS9obOuD7AjLslkE6YWDJYGHf/view). Note: for demonstration purposes, the file created in the demo is titled sampleREADME.md. The final version generates a file with the title README.md. 
+
+  ![Demo README.md file generated using make-a-readme](./assets/images/sampleREADME.png)
   
   ## License
   This repository is licensed under the [MIT license](https://choosealicense.com/licenses/mit/).
